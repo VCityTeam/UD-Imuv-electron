@@ -1,12 +1,13 @@
 {
-  "name": "flaky-wall-double-6r5ct",
-  "productName": "flaky-wall-double-6r5ct",
+  "name": "ud-viz-electron",
+  "productName": "ud-viz-electron",
   "description": "My Electron application description",
   "keywords": [],
   "main": "./main.js",
   "version": "1.0.0",
   "author": "diego",
   "scripts": {
+    "build": "cd ./node_modules/ud-viz && npm i && npm run build",
     "start": "electron ."
   },
   "dependencies": {
