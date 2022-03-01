@@ -1,0 +1,18 @@
+{
+  "name": "flaky-wall-double-6r5ct",
+  "productName": "flaky-wall-double-6r5ct",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "diego",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "ud-viz": "*"
+  },
+  "devDependencies": {
+    "electron": "16.0.6"
+  }
+}
