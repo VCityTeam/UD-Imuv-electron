@@ -3,17 +3,63 @@
   "productName": "ud-viz-electron",
   "description": "My Electron application description",
   "keywords": [],
-  "main": "./main.js",
+  "main": "./src/main.js",
   "version": "1.0.0",
   "author": "diego",
   "scripts": {
-    "build": "cd ./node_modules/ud-viz && npm i && npm run build",
-    "start": "electron ."
+    "start": "electron-forge start",
+    "build": "cross-env NODE_ENV=production webpack",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "ud-viz": "*"
   },
   "devDependencies": {
-    "electron": "16.0.6"
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "child-process-promise": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^0.28.10",
+    "electron": "16.0.6",
+    "eslint": "^7.28.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "ud_viz_electron"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
