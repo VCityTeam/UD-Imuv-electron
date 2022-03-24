@@ -1,5 +1,5 @@
 # UD-Viz-electron
-A basic UD-Viz application served with electron.
+The [UD-Viz examples](https://github.com/VCityTeam/UD-Viz/tree/master/examples) packaged as an [electron](https://en.wikipedia.org/wiki/Electron_(software_framework)) application.
 
 ## How to build
 First setup an npm application environment :
